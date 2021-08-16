@@ -1,0 +1,150 @@
+<html lang="english">
+
+<title>
+Magic 8 Ball
+</title>
+
+<main>
+    <body>
+
+    <style>
+        html {
+            font-family: monospace;
+            background-image: url("pexels-henry-&-co-1939485.jpg");
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+
+
+        }
+       h1 { text-align: center}
+
+
+       .wrapper {
+           text-align: center;
+           padding-bottom: 100px;
+           padding-top: 50px;
+
+       }
+
+       .button {
+           transition-duration: 0.4s;
+           border: 2px solid black;
+           border-radius: 5px;
+           font-size: 50px;
+           font-family: monospace;
+       }
+
+       .button:hover {
+           background-color: black; /* Green */
+           color: white;
+           box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+       }
+
+
+       #console {
+
+           color: antiquewhite;
+           font-size: 19px;
+           position: relative;
+           top: -200px;
+           text-align: center;
+           font-weight: bold;
+
+
+
+       }
+
+        .img {
+            opacity: 0.9;
+           text-align: center;
+
+        }
+
+    </style>
+
+
+
+<h1> Welcome to the Magic 8 Ball! Ask your question and click the button to get an answer. Have fun! </h1>
+
+
+
+
+    <div class="wrapper">
+    <button class="button" onclick="myFunction()">Click me</button>
+    </div>
+
+    <script>
+        function myFunction() {
+            location.reload();}
+    </script>
+
+
+<div class="img">
+    <img src="showImage.png"  alt="ball">
+</div>
+
+<div id="console">
+
+    <script>
+
+        if (window.console) console = {
+            log: function run(){
+                var output='',
+                    console=document.getElementById('console');
+                for (var i=0;i<arguments.length;i++) {
+                    output+=arguments[i]+' ';
+                }
+                console.innerText+=output+"\n";
+            }
+        };
+
+
+        let future = Math.floor(Math.random() * 8);
+
+        switch (future) {
+            case 1:
+                console.log('Yes');
+                break;
+
+            case 2:
+                console.log('No');
+                break;
+
+            case 3:
+                console.log('Maybe');
+                break;
+
+            case 4:
+                console.log('Definetly');
+                break;
+
+            case 5:
+                console.log('Just Don`t..');
+                break;
+
+            case 6:
+                console.log('Run for it!');
+                break;
+
+            case 7:
+                console.log('I don`t know.');
+                break;
+
+            case 8:
+                console.log('just shut up..S');
+                break;
+
+            default:
+                console.log('Ask again');
+        }
+    </script>
+
+    </div>
+
+    </body>
+</main>
+
+
+</html>
