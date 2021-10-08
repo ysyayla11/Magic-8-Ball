@@ -3,6 +3,15 @@
 
    function myFunction() {
 
+       document.getElementById('imgSh').classList.add("shake");
+       element = document.getElementById("imgSh");
+
+           element.classList.remove("shake");
+
+           void element.offsetWidth;
+
+       document.getElementById('imgSh').classList.add("shake");
+
        const box = document.querySelector('p');
        // Outputs '<p>Hello there!</p>':
      // console.log(box.innerHTML);
@@ -42,5 +51,10 @@
              box.innerHTML = '<p>Try Again</p>';
              break;
 
+         default:
+             box.innerHTML = '<p>Nope</p>';
+             break;
 
- } }
+ }
+
+}

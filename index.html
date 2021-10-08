@@ -4,6 +4,7 @@
     <title>
         Magic 8 Ball
     </title>
+
     <style>
         html {
             font-family: monospace;
@@ -13,22 +14,18 @@
             -o-background-size: cover;
             background-size: cover;
             text-align: center;
-
-
         }
+
         h1 { text-align: center;
             font-size: 40px;
-
         }
 
-
-        .button {
+        .button , #question{
             transition-duration: 0.4s;
             border: 2px solid black;
             border-radius: 5px;
             font-size: 50px;
             font-family: monospace;
-
         }
 
         .button:hover {
@@ -42,8 +39,7 @@
             position: relative;
             text-align: center;
             color: white;
-            margin: 10Rem;
-
+            margin: 5Rem;
         }
 
         #centered {
@@ -52,6 +48,13 @@
             left: 50%;
             transform: translate(-50%, -50%);
         }
+
+        .shake {
+            animation: shake 0.2s;
+
+            animation-iteration-count: 2;
+        }
+
         @keyframes shake {
             0% { transform: translate(1px, 1px) rotate(0deg); }
             10% { transform: translate(-1px, -2px) rotate(-1deg); }
@@ -65,28 +68,19 @@
             90% { transform: translate(1px, 2px) rotate(0deg); }
             100% { transform: translate(1px, -2px) rotate(-1deg); }
         }
+        p {
+            font-size: 1.5Rem;
+        }
     </style>
 </head>
-
 
     <body>
     <script src="script.js"></script>
 
-
-
-
-
 <h1> Welcome to the Magic 8 Ball! Ask your question and click the button to get an answer. Have fun! </h1>
 
-
-    <div class="wrapper">
-
-    </div>
-
-
-
     <div class="container">
-        <img src="showImage.png"  alt="ball" style="animation: shake">
+        <img id="imgSh" src="showImage.png"  alt="ball" height="400" width="400">
         <div id="centered">
             <box>
             <p>Shake it</p>
@@ -94,18 +88,18 @@
         </div>
     </div>
 
-    <script>
-
-    </script>
-
-
-
 <div id="console">
-
 
     </div>
 
-    <button class="button" onclick="myFunction()">Click me</button>
+    <label for="console"></label>
+
+    <input type="text" id="question" name="Question" placeholder="  Ask Your Question">
+    <br>
+    <br>
+    <br>
+
+    <button class="button" onclick="myFunction()">Shake it!</button>
 
     </body>
 
